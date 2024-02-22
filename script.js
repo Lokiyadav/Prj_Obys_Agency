@@ -33,7 +33,9 @@ tl.to(".line h2",{
 tl.to("#loader",{
   opacity:0,
   duration:0.2,
-  delay:2.3
+  //edit this section
+  // delay:2.3
+  delay:1
 })
 
 tl.from("#page1",{
