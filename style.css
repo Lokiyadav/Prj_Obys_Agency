@@ -8,13 +8,14 @@ html,body{
     height: 100%;
     width: 100%;
 }
+
 #crsr{
     width: 3vw;
     height: 6vh;
     border: 1px solid white;
     border-radius: 50%;
     position: fixed;
-    z-index: 9;
+    z-index: 999;
     mix-blend-mode: difference;
     transform: translate(-50%,-50%);
 }
@@ -110,7 +111,7 @@ html,body{
 } 
 
 #page1{
-    /* height: 100vh; */
+    /* height: 93vh; */
     width: 100%;
     background-color: #151515;
     height: fit-content;
@@ -163,7 +164,7 @@ html,body{
 .page1-center:nth-child(2)::before{
     content: "01";
     position: absolute;
-    font-size: 7.5vh;
+    font-size: 3.5vw;
     left:22%;
     top: 29%;
     font-family: "silk serif";
@@ -224,7 +225,8 @@ html,body{
     height: 73vh;
     width: 70vw;
     background-color: red;
-    margin-left: 30vw;
+    margin-left: 29vw;
+    margin-right: 1vw;
     background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
     position: absolute;   
 }
@@ -240,8 +242,313 @@ html,body{
     height: 100%;
     object-fit: cover;
 }
+
 #page3{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: rgb(7, 43, 43);
+}
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+}
+.page4-content{
+    width: 70%;
+    margin-left: 30%;
+    padding: 2vw 0;
+    background-color: #151515;
+}
+.page4-content:nth-child(1)::before{
+    content: "03";
+    font-size: 3.5vw;
+    font-weight: 400;
+    font-family: "silk serif";
+    position: absolute;
+    left: 22%;
+    top: 2.01%;
+}
+.page4-content h1{
+    font-size: 7vw;
+    font-weight: 600;
+   text-transform: uppercase;
+   font-family: "plain light";
+}
+
+.page4-content .underline{
+    height: 0.1vw;
+    margin-top: 1.6vw;
+    width: 95%;
+    background-color: white;
+}
+.page4-content>p{
+    font-size: 2.5vw;
+    font-weight: 400;
+    font-family: "plain light";
+    width: 55%;
+    margin-top: 2vw;
+}
+.page4-content2{
+    display: flex;
+    padding-top: 1vw;
+}
+.page4-content2 img{
+    width: 35%;
+    margin-left: 30%;
+}
+.page4-content2 p{
+    width: 20%;
+    padding-left: 1.2vw;
+    line-height: 1.5vw;
+    font-size: 1vw;
+    font-weight: 400;
+    font-family: "plain light";   
+}
+
+.page4-content3{
+    background-color:#3F7DF4 ;
+    width: 40%;
+    /* height: 70%; */
+    padding: 2.6vw 3vw;
+     position: relative;
+ margin-top: -16vw;
+ margin-left: 54vw;
+}
+.page4-content3 .elements{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.637);
+    padding-top:3vw ;
+    padding-bottom: 1vw;
+}
+.elements h4{
+    font-size: 2vw;
+    font-family: "plain light";  
+    font-weight: 400;
+}
+.elements p{
+    width: 50%;
+    font-size: 1.1vw;
+    font-weight: 400;
+    font-family: "plain light";  
+}
+.underline2{
+    height: 0.1vw;
+    width: 65%;
+    background-color: rgba(255, 255, 255, 0.733);
+    margin-top: 7vw;
+    margin-left: 30%;
+    margin-right: 5vw;
+}
+#page5{
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+     padding-top: 0.01vw;
+    
+    
+}
+.Auto-scrollbar{
+    margin-top: 0.5vw;
+    width: 100%;
+    height: 20vh;
+    background-color: #151515;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.scroll-container{
+    width: 100%;
+    height: 20vh;
+    background-color: #151515;
+    display: inline-block;
+    animation-name: scroller;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes scroller {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.scroll-container h1{
+    font-size: 8vw;
+    text-align: center;
+    font-family: "silk serif";
+    animation-name: text-anime;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes text-anime {
+    0%{
+        -webkit-text-stroke: 0.01vw rgba(255, 255, 255, 0.637);
+        color: transparent;
+    }
+    45%{
+        -webkit-text-stroke: 0.01vw rgba(255, 255, 255, 0.637);
+        color: transparent;
+    }
+    60%{
+        -webkit-text-stroke: 0.01vw rgba(255, 255, 255, 0.637);
+        color: transparent;
+    }
+    100%{
+        -webkit-text-stroke: 0.01vw rgba(255, 255, 255, 0.637);
+        color: transparent;
+    }
+}
+
+
+.Auto-scrollbar2{
+    margin-top: 0.5vw;
+    width: 100%;
+    height: 20vh;
+    background-color: #151515;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.scroll-container2{
+    width: 100%;
+    height: 20vh;
+    background-color: #151515;
+    display: inline-block;
+    animation-name: scroller2;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes scroller2 {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+.scroll-container2 h1{
+    font-size: 8vw;
+    text-align: center;
+    font-family: "silk serif";
+    animation-name: text-anime;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#page6{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #151515;
+}
+.page6-content{
+    width: 65%;
+    margin-left: 30%;
+    margin-right:5% ;
+    display: flex;
+    align-items: center;
+    /* background-color: green; */
+}
+.page6-content:nth-child(1)::before{
+    content: "04";
+    position: absolute;
+    left: 22%;
+    top: 2%;
+    font-size: 3.5vw;
+    font-weight: 400;
+    font-family: "silk serif";
+    /* z-index: 9999; */
+}
+.page6-content h1{
+    font-size: 8vw;
+    font-weight: 600;
+    font-family: "plain light";
+    text-transform: uppercase;
+}
+.page6-content i{
+    font-size: 9vw;
+    margin-left: 1vw;
+}
+.underline3{
+    height: 0.1vw;
+    width: 65%;
+    background-color: rgba(255, 255, 255, 0.733);
+    margin-top: 3vw;
+    margin-left: 30%;
+    margin-right: 4vw;
+}
+.page6-content2{
+    width: 65%;
+    margin-top: 3vw;
+    margin-left: 30%;
+    margin-right:5% ;
+    /* background-color: green; */
+    display: flex;
+}
+.page6-content2 .social{
+    width: 30%;
+    margin-left: 0.4vw;
+    /* background-color: blue;   */
+}
+.social h1{
+    font-size: 1.6vw;
+    font-family: "plain light";
+    font-weight: 500;
+    margin-bottom: 2vw;
+}
+.social li{
+    font-size: 1.4vw;
+    font-weight: 400;
+    font-family: "plain light";
+    list-style-type: none;
+}
+.page6-content2 .address{
+    width: 30%;
+    /* background-color: blue;   */
+}
+.address h1{
+    font-size: 1.6vw;
+    font-weight: 500;
+    font-family: "plain light";
+    margin-bottom: 2vw;
+}
+.address h4{
+    font-size: 1.4vw;
+    font-family: "plain light";
+    font-weight: 400;
+}
+.page6-content2 .email{
+    width: 30%;
+    /* background-color: blue;   */
+}
+.email h1{
+    font-size: 1.6vw;
+    font-weight: 500;
+    font-family: "plain light";
+    margin-bottom: 2vw;
+}
+.email h4{
+    font-size: 1.4vw;
+    font-weight: 400;
+    font-family: "plain light";
+}
+.copy-write {
+    width: 65%;
+    margin-left: 30%;
+    margin-right: 5%;
+    margin-top: 3vw;
+    /* background-color: #FFA63D; */
+}
+.copy-write h1{
+    font-size: 1.6vw;
+    font-weight: 500;
+   font-family: "plain light";
+   font-weight: 400;
 }
