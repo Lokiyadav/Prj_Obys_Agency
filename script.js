@@ -56,7 +56,7 @@ tl.from(".line1-par1", {
       } else {
         load.innerHTML = count;
       }
-    }, 30);
+    }, 28);
   },
 });
 
@@ -68,7 +68,7 @@ tl.to(".line h2",{
 tl.to("#loader",{
   opacity:0,
   duration:0.2,
-  delay:2.3,
+  delay:3.3,
 })
 
 tl.from("#page1",{
