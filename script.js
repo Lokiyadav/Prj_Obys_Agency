@@ -1,5 +1,6 @@
 //locomotive applying
 function locomotivescrolltrAnimation(){
+
   gsap.registerPlugin(ScrollTrigger);
 
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
@@ -67,9 +68,7 @@ tl.to(".line h2",{
 tl.to("#loader",{
   opacity:0,
   duration:0.2,
-  // edit this
-  // delay:2.3,
-  delay:0,
+  delay:2.3,
 })
 
 tl.from("#page1",{
@@ -97,6 +96,9 @@ tl.from("#page1-center3 h2,#page1-center3 h3",{
   stagger:0.1,
   duration:0.1
 })
+// tl.from("#page1-center2 h1, #page2",{
+//   opacity:0
+// })
 }
 LoadingAnimation();
 
@@ -106,8 +108,8 @@ function CursorAnimation(){
      left:position.x,
      top:position.y
     })
- })
- 
+  })
+
  
  Shery.makeMagnet(".nav-part2 h2" /* Element to target.*/, {
    //Parameters are optional.
@@ -116,3 +118,118 @@ function CursorAnimation(){
  });
 }
 CursorAnimation();
+
+function videoCursorAnimation(){
+  
+
+  var videoContenar = document.querySelector(" .video-content");
+  var video = document.querySelector(".video-content video");
+
+  videoContenar.addEventListener("mouseenter",function(){
+    videoContenar.addEventListener("mousemove",function(position){
+
+      gsap.to("#crsr",{
+        opacity:0,
+      })
+      gsap.to(" .video-crsr",{
+        left:position.x-400,
+        y:position.y-170,
+        scale:0.7,
+      })
+     
+    }) 
+  })
+  
+  videoContenar.addEventListener("mouseleave",function(){
+    gsap.to("#crsr",{
+      opacity:1,
+    })
+    gsap.to(" .video-crsr",{
+      left:"75%",
+      top:"-11%",
+    })
+   
+  })
+
+ var videocrsr = document.querySelector(".video-crsr");
+ var flag = 0;
+
+  videoContenar.addEventListener("click",function(){
+   
+    if(flag==0){
+      video.play();
+      video.style.opacity = 1;
+    videocrsr.innerHTML = `<i class="ri-pause-fill"></i> ` ;
+      gsap.to(".video-crsr" ,{
+           scale:0.7,
+      })
+      flag = 1;
+    }
+      else{
+        video.pause();
+        video.style.opacity = 0;
+      videocrsr.innerHTML = `<i class="ri-play-fill"></i> ` ;
+        gsap.to(".video-crsr" ,{
+             scale:0.7,
+        })
+        flag = 0;
+      }
+  })
+  }
+  videoCursorAnimation();
+
+var flagAnimation =   document.querySelector("#page1-center3")
+  flagAnimation.addEventListener("mousemove",function(position){
+    
+    gsap.to("#flag",{
+      x:position.x,
+      y:position.y,
+      opacity:1,
+    })
+  })
+  flagAnimation.addEventListener("mouseleave",function(){
+    gsap.to("#flag",{
+      opacity:0,
+    })
+  })
+
+function sheryjsAnimation(){
+  Shery.imageEffect(".image-div1",{
+    style:3,
+    // debug:true,
+    gooey:true,
+    config:{"uFrequencyX":{"value":8.4,"range":[0,100]},"uFrequencyY":{"value":6.87,"range":[0,100]},"uFrequencyZ":{"value":9.92,"range":[0,100]},"geoVertex":{"range":[1,64],"value":28.41},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.7125565472551657},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.24,"range":[1,5]},"scrollType":{"value":0},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":2.75,"range":[0,10]},"metaball":{"value":0.32,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.06,"range":[0,0.1]},"noise_height":{"value":0.43,"range":[0,2]},"noise_scale":{"value":13.74,"range":[0,100]}},
+  })
+  Shery.imageEffect(".image-div2",{
+    style:3,
+    // debug:true,
+    gooey:true,
+    config:{"uFrequencyX":{"value":12,"range":[0,100]},"uFrequencyY":{"value":12,"range":[0,100]},"uFrequencyZ":{"value":10,"range":[0,100]},"geoVertex":{"range":[1,64],"value":28.41},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9500624898114438},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":false},"maskVal":{"value":1.24,"range":[1,5]},"scrollType":{"value":0},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":2.75,"range":[0,10]},"metaball":{"value":0.32,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.06,"range":[0,0.1]},"noise_height":{"value":0.43,"range":[0,2]},"noise_scale":{"value":13.74,"range":[0,100]}},
+  })
+}
+sheryjsAnimation();
+
+// using textillate.js  for textAnimation
+var lastAnime = document.querySelector(".page6-content");
+var lasttextAnime =document.querySelector(".page6-content h1");
+
+  lastAnime.addEventListener("mouseenter",function(){
+      gsap.from(".page6-content h1",{
+        onStart:function(){
+          $('.page6-content h1').textillate({ in: { effect: 'fadeIn' }} );
+          lasttextAnime.style.fontSize = "7vw";
+          lasttextAnime.style.fontFamily = "silk serif";
+     
+        }
+       }) 
+
+  })
+  lastAnime.addEventListener("mouseleave",function(){     
+     
+        gsap.from(".page6-content h1",{
+          onStart:function(){
+            lasttextAnime.style.fontFamily = "plain light";
+            $('.page6-content h1').textillate({ out: { effect: 'fadeOut' } });
+          }
+         }) 
+})
